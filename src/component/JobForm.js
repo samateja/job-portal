@@ -16,10 +16,10 @@ const JobForm = ({job, onChange, onSearch, loading, errors}) => {
   return (
     <form >
      <div className="custom-box">
-      <div className="col">
+      <div className="column">
         <TextInput placeholder={"Location"} name={"location"} className={"input"} value={job.location} onChange={onChange} error={errors.title}/>
       </div>
-      <div className="col">
+      <div className="column">
         <TextInput placeholder={"Find your dream job now"} className={"input"} name={"query"} value={job.query} onChange={onChange} error={errors.title}/>
       </div>
       <div className="col">
