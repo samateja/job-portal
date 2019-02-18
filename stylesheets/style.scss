@@ -30,12 +30,14 @@ html {
 
   color: #ffffff;
 }
+.custom-box{
+  display: inline-flex;
+}
 
 body {
   background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0)), url("../images/background-lg-big.png") ;
   background-repeat: no-repeat;
-  background-size: 100% 500px;
-  object-fit: contain;
+  background-size: 100%;
   min-height: 100%;
 }
 
@@ -97,8 +99,9 @@ body {
 
 
 .no-text-overflow {
-  white-space: nowrap;
+  white-space: pre-line;
   overflow: hidden;
+  text-align: left;
 }
 
 .text-overflow {
@@ -129,6 +132,7 @@ body {
   width: 15px;
   height: 20px;
   display: inline-block;
+  margin-left: -3%;
 }
 .mode {
   background: $mode;
@@ -139,6 +143,9 @@ body {
   padding: 1px;
   text-decoration: none;
 }
+.button.is-primary {
+      background-color: #5ebe6b;
+  }
 
 .font-inherit {
   height: 14px;
@@ -159,8 +166,10 @@ body {
     font-weight: bold;
     font-size: 1em;
     color: #363636;
+    text-align: left;
   }
 }
+
 .card-job-title {
   padding-bottom: unset;
 }
@@ -171,6 +180,11 @@ body {
 }
 .card .big-card {
   width: 60%;
+}
+.card-content{
+  background-color:rgba(0,0,0,0);
+  padding:0px 0px 20px;
+  text-align:left;
 }
 
 .job-detail {
@@ -192,4 +206,8 @@ body {
   background-image: linear-gradient(to bottom, #f4f4f4, #f4f4f4);
   cursor: default;
   color: #9b9b9b;
+}
+
+.col {
+    padding: 0px 7px 0px 8px;
 }

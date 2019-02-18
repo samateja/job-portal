@@ -14,16 +14,18 @@ import TextInput from './TextInput';
  */
 const JobForm = ({job, onChange, onSearch, loading, errors}) => {
   return (
-    <form className="columns">
-      <div className="column">
+    <form >
+     <div className="custom-box">
+      <div className="col">
         <TextInput placeholder={"Location"} name={"location"} className={"input"} value={job.location} onChange={onChange} error={errors.title}/>
       </div>
-      <div className="column">
+      <div className="col">
         <TextInput placeholder={"Find your dream job now"} className={"input"} name={"query"} value={job.query} onChange={onChange} error={errors.title}/>
       </div>
-      <div className="column">
+      <div className="col">
         <input type="submit" disabled={loading} className="button is-primary" onClick={onSearch} value={loading? 'Searching...': 'Search'}/>
       </div>
+     </div>
     </form>
   )
 };
