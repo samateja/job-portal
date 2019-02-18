@@ -24,7 +24,7 @@ const JobList = ({jobs, fetchJob}) => {
 };
 
 JobList.propTypes = {
-  jobs: PropTypes.object.isRequired,
+  jobs: PropTypes.array.isRequired,
   fetchJob: PropTypes.func.isRequired
 };
 
