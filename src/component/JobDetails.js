@@ -30,25 +30,25 @@ class JobDetails extends React.Component {
             <button className="button is-pulled-left arrow-left" onClick={() => this.state.fetchAllJobs()}>
             </button>
           </div>
-          <div className="column is-two-thirds is-left">
+          <div className="column is-two-thirds is-left header-details">
             <h1 className="Job-title level-left">{this.state.job.title}</h1>
             <label className="level-left">{this.state.job.company}</label>
-            <label className="level-left"><span className="location-pin"></span>{this.state.job.location}</label>
-            <label className="level-left">{getDateParsed(this.state.job.created_at)}</label>
+            <label className="level-left location-font"><span className="location-pin"></span>{this.state.job.location}</label>
+            <label className="level-left time-font">{getDateParsed(this.state.job.created_at)}</label>
             <label className="mode is-pulled-left"><span>{this.state.job.type}</span></label>
           </div>
-          <div className="column">
+          <div className="column button-adjust">
             {!this.state.job.applied ? <button className="button is-primary is-pulled-right" onClick={() => this.state.onApply(this.state.job.id)}>Apply</button>
               : <span id="applied" className="button is-outlined is-disabled is-pulled-right"> Applied </span>
             }
           </div>
         </div>
 
-        <div className="card-content text-overflow" id="desc">
+        <div className="card-content text-overflow card-description" id="desc">
           <p>{this.state.job.description}</p>
         </div>
 
-        <div className="card-footer column has-text-centered">
+        <div className="card-footer column has-text-centered job-apply">
           {!this.state.job.applied && <button className="button is-primary" onClick={() => this.state.onApply(this.state.job.id)}>Apply</button>}
         </div>
 

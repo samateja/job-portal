@@ -31,7 +31,7 @@ class Card extends React.Component {
   componentDidMount() {
     let description = this.state.description;
     let desc =  document.getElementById(this.state.jobId + "-desc");
-    desc.innerHTML = truncate.apply(description, [300, true]);
+    desc.innerHTML = truncate.apply(description, [100, true]);
   }
 
   render() {
@@ -46,7 +46,7 @@ class Card extends React.Component {
                     {this.state.applied && <button className="button is-outlined is-disabled" id="applied">Applied</button>}
                   </div>
                   <div className="column is-full card-company">
-                    <label className="is-pulled-left">{this.state.company}</label>
+                    <label className="is-pulled-left location-font">{this.state.company}</label>
                   </div>
                 </div>
               </div>
@@ -59,10 +59,10 @@ class Card extends React.Component {
           </div>
           <div className="card-footer columns is-multiline">
             <div className="column is-full no-padding-top">
-              <label className="is-pulled-left"><span className="location-pin font-inherit"></span>{this.state.location}</label>
+              <label className="is-pulled-left location-font"><span className="location-pin font-inherit"></span>{this.state.location}</label>
             </div>
             <div className="column is-full no-padding-top">
-              <time className="is-pulled-left">{this.state.date}</time>
+              <time className="is-pulled-left time-font">{this.state.date}</time>
             </div>
           </div>
         </div>

@@ -38,7 +38,8 @@ body {
   background: linear-gradient(to top, #ffffff, rgba(255, 255, 255, 0)), url("../images/background-lg-big.png") ;
   background-repeat: no-repeat;
   background-size: 100%;
-  min-height: 100%;
+  height:643px;
+  max-height: 643px;
 }
 
 @media (max-width: 600px) {
@@ -99,9 +100,9 @@ body {
 
 
 .no-text-overflow {
-  white-space: pre-line;
   overflow: hidden;
   text-align: left;
+  padding:0px 0px 10px 24px;
 }
 
 .text-overflow {
@@ -109,7 +110,7 @@ body {
 }
 
 .card {
-  padding: 10px;
+  padding: 7px 6px 6px 10px;
   margin:10px auto ;
   box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.5);
   background-color: #ffffff;
@@ -118,7 +119,15 @@ body {
 .no-padding-top{
   padding-top: 0px;
 }
-
+.card-footer {
+  padding:0px 0px 10px 24px;
+}
+.header-details{
+  padding: 10px 60px 10px 80px;
+}
+.button-adjust{
+    margin-right: 10%;
+}
 .arrow-left {
   background: url('../images/arrow-left.svg') no-repeat center center / contain;
   border: unset;
@@ -129,10 +138,16 @@ body {
 
 .location-pin {
   background: url('../images/location-pin.svg') no-repeat center center / contain;
-  width: 15px;
-  height: 20px;
+  width: 11px;
+  height: 11px !important;
   display: inline-block;
-  margin-left: -3%;
+}
+.location-font{
+  font-size:14px;
+}
+.time-font{
+  font-size:12px;
+  margin-left: 3px;
 }
 .mode {
   background: $mode;
@@ -154,7 +169,7 @@ body {
 .mode span {
   background: #fff;
   display: block;
-  padding: 0 2px;
+  padding: 0px 5px 0px 5px;
   border-radius: 6px;
 }
 
@@ -197,9 +212,16 @@ body {
 
   }
   .card-header {
-    padding: 24px;
+    padding: 16px;
     margin: unset;
   }
+}
+.card-header {
+  padding: 16px 0px 5px 24px;
+  box-shadow: none !important;
+}
+.card-footer{
+  border:none !important;
 }
 #applied {
   background-blend-mode: darken;
@@ -210,4 +232,12 @@ body {
 
 .col {
     padding: 11px 20px 0px 0px;
+}
+.card-description{
+  padding: 10px 60px 10px 80px;
+  text-align: justify;
+}
+
+.job-apply{
+  padding: 10%;
 }

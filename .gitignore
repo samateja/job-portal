@@ -1,3 +1,4 @@
 node_modules/
 .idea
 searchResults
+package-lock.json
