@@ -30,7 +30,7 @@ class JobDetails extends React.Component {
             <button className="button is-pulled-left arrow-left" onClick={() => this.state.fetchAllJobs()}>
             </button>
           </div>
-          <div className="column is-two-thirds is-left header-details">
+          <div className="header-details">
             <h1 className="Job-title level-left">{this.state.job.title}</h1>
             <label className="level-left">{this.state.job.company}</label>
             <label className="level-left location-font"><span className="location-pin"></span>{this.state.job.location}</label>
